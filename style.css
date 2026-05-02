@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  color: white;
+
+  display: flex;
+  align-items: center;
+  
+  min-height: 100vh; /* FIX biar aman di HP */
+  padding: 20px; /* biar gak nempel pinggir */
+}
+
+/* PAGE */
+.page {
+  display: none;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.page.active {
+  display: flex;
+}
+
+/* CONTAINER */
+.menu-container {
+  width: 100%;
+  max-width: 600px; /* lebih besar di laptop */
+
+  background: #334155;
+  padding: 40px;
+  border-radius: 24px;
+
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+
+  transform: scale(1.05); /* sedikit lebih besar */
+}
+
+/* TITLE */
+.menu-title {
+  text-align: center;
+  font-size: clamp(22px, 4vw, 28px); /* RESPONSIF */
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+/* MENU ITEM */
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 18px;
+  border-radius: 14px;
+  margin-bottom: 14px;
+
+  background: #475569;
+  cursor: pointer;
+
+  transition: 0.25s;
+  font-size: clamp(15px, 3.5vw, 18px); /* RESPONSIF */
+}
+
+.menu-item i {
+  font-size: 20px;
+}
+
+/* HOVER */
+.menu-item:hover {
+  background: #64748b;
+  transform: scale(1.04);
+}
+
+/* COMING PAGE */
+.coming {
+  font-size: clamp(18px, 4vw, 24px);
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* BACK BUTTON */
+.back {
+  margin-top: 25px;
+  padding: 14px;
+  border-radius: 12px;
+  background: #475569;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.25s;
+  font-size: 16px;
+}
+
+.back:hover {
+  background: #64748b;
+}
+
+/* EXTRA RESPONSIVE (HP kecil) */
+@media (max-width: 600px) {
+  .menu-container {
+    max-width: 100%;
+    width: 100%;
+
+    padding: 30px 20px;
+
+    border-radius: 20px;
+
+    transform: scale(1.05); /* bikin terasa lebih besar */
+  }
+
+  .menu-title {
+    font-size: 24px;
+  }
+
+  .menu-item {
+    padding: 16px;
+    font-size: 16px;
+  }
+}
+  
+  /* ANIMASI MASUK */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* aktif saat page muncul */
+.page.active .menu-container {
+  animation: fadeSlideUp 0.5s ease;
+}
+
+/* animasi item satu-satu */
+.menu-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 0.4s ease forwards;
+}
+
+/* delay biar berurutan */
+.menu-item:nth-child(1) { animation-delay: 0.1s; }
+.menu-item:nth-child(2) { animation-delay: 0.2s; }
+.menu-item:nth-child(3) { animation-delay: 0.3s; }
+.menu-item:nth-child(4) { animation-delay: 0.4s; }
+.menu-item:nth-child(5) { animation-delay: 0.5s; }
+.menu-item:nth-child(6) { animation-delay: 0.6s; }
+.menu-item:nth-child(7) { animation-delay: 0.7s; }
+  
+  .menu-item:active {
+  transform: scale(0.96);
+}  
+
+
+  body {
+  padding: 15px;
+}

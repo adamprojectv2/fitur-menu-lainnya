@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Lainnya</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- MENU -->
+<div class="page active" id="menu">
+  <div class="menu-container">
+    <div class="menu-title">Menu Lainnya</div>
+
+    <div class="menu-item" onclick="goLink()">
+      <i class="fas fa-globe"></i>
+      <span>Daftar Member Kelas XI.D</span>
+    </div>
+
+    <div class="menu-item" onclick="showPage('coming')">
+      <i class="fas fa-gamepad"></i>
+      <span>Game Khusus Jomblo</span>
+    </div>
+
+    <div class="menu-item" onclick="showPage('coming')">
+      <i class="fas fa-users"></i>
+      <span>Game Khusus Berempat</span>
+    </div>
+
+    <div class="menu-item" onclick="showPage('coming')">
+      <i class="fas fa-dice"></i>
+      <span>Game Satu RT</span>
+    </div>
+
+    <div class="menu-item" onclick="showPage('coming')">
+      <i class="fas fa-paper-plane"></i>
+      <span>Request Fitur</span>
+    </div>
+
+    <div class="menu-item" onclick="goIg()">
+      <i class="fab fa-instagram"></i>
+      <span>Instagram Developer</span>
+    </div>
+  </div>
+</div>
+
+<!-- COMING SOON -->
+<div class="page" id="coming">
+  <div class="menu-container">
+    <div class="coming">
+      🚀 Coming Soon...<br><br>
+      Fitur game sedang dalam pengembangan!<br>
+      Nantikan keseruannya, tunggu ya!!
+    </div>
+
+    <div class="back" onclick="showPage('menu')">
+      ← Kembali
+    </div>
+  </div>
+</div>
+
+<!-- JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
